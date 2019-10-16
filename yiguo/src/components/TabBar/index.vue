@@ -4,7 +4,7 @@
       <span class="iconfont">&#xe6da;</span>
       <p>首页</p>
     </router-link>
-    <router-link to="/a" class="bottomNav_link">
+    <router-link to="/classify" class="bottomNav_link">
       <span class="iconfont">&#xe616;</span>
       <p>分类</p>
     </router-link>
@@ -16,7 +16,7 @@
       <span class="iconfont">&#xe610;</span>
       <p>购物车</p>
     </router-link>
-    <router-link to="/a" class="bottomNav_link">
+    <router-link to="/mine" class="bottomNav_link">
        <span class="iconfont">&#xe601;</span>
       <p>我的易果</p>
     </router-link>
