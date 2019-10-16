@@ -2,12 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-const routerPush = Router.prototype.push
-Router.prototype.push = function push(location) {
-return routerPush.call(this, location).catch(error=> error)
-}
+
 //加载通用样式main.scss文件  webpack all in js
 import "./stylesheets/main.scss"
+import axios from "axios"
+Vue.prototype.$http = axios
 Vue.config.productionTip = false
 // 引入 根rem
 import "./modules/rem"
