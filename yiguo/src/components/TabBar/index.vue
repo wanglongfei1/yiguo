@@ -1,6 +1,6 @@
 <template>
   <div class="tabbar">
-     <router-link to="/" class="bottomNav_link">
+     <router-link to="/home" class="bottomNav_link">
       <span class="iconfont">&#xe6da;</span>
       <p>首页</p>
     </router-link>
@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
     .tabbar{
+        background: #fff;
         width:100%;
         height:0.5rem;
         position:fixed;

@@ -20,7 +20,11 @@ body{
     box-sizing: border-box;
 }
 
-img{vertical-align:top; display:block; border:none;}
+img{
+	vertical-align: middle;
+	display:block;
+	border:none;
+}
 
 a,input{outline:none;}
 
