@@ -120,7 +120,10 @@
                     <li
                         v-for="good in goods"
                         :key="good._id+Math.random()"
+                       @click="routerDe(good._id)"
                     >
+                    
+
                         <div class="proitem">
                             <div class="pic">
                                 <a>
@@ -145,6 +148,7 @@
                                 </div>
                             </div>
                         </div>
+                    
                     </li>
                 </ul>
             </div>
@@ -184,6 +188,9 @@ export default {
         }
     },
     methods:{
+        routerDe(id){
+            this.$router.push('/good/'+id)
+        },
         loadMore(){
             if(!this.hasMore){
                 Toast({

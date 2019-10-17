@@ -16,7 +16,7 @@
             class="inforPro"
             v-for="detail in details"
             :key="detail.id"
-            
+             @click="routerDe(detail._id)"
           >
               <div class ="img">
                 <img :src="detail.SmallPic" alt="">
@@ -78,6 +78,9 @@ export default {
        ...mapGetters(["computeTotal"])
     },
     methods:{
+      routerDe(id){
+            this.$router.push('/good/'+id)
+      },
      ...mapActions(['addGoodInCars']),
         wlf(type){
           console.log(type)
@@ -109,7 +112,7 @@ export default {
    border-radius: 5px;
    text-align: center;
    line-height: 0.2rem;
-   
+   z-index:999
 }
 .opt{
   width:0.4rem;
@@ -118,6 +121,7 @@ export default {
   bottom:1rem;right:0.2rem;
   background: url(//img05.yiguoimg.com/d/web/180508/01311/150610/cart1.png);
   background-size: 0.4rem  0.4rem;
+  z-index:999
 }
   .all{
     background: white;

@@ -11,17 +11,17 @@
               <a href="">立即打开</a>
           </div>
           <div class="banner">
-               <img src="https://img10.yiguoimg.com/d/items/2019/190329/9288737695704701_500.jpg" alt="">
+               <img :src="good.SmallPic" alt="">
           </div>
           <div class="content">
               <div class="title">
-                  <p class="tit-txt">南非西柚2个270g以上/个</p>
+                  <p class="tit-txt">{{good.CommodityName}}</p>
                   <div class="copy-box">
                       <span class="copy">买1赠1</span>
-                      <span>榨汁调饮 满口柚香</span>
+                      <span>{{good.SubTitle}}</span>
                   </div>
                   <div class="pic-box">
-                      <span class="pic">￥29.9</span>
+                      <span class="pic">￥{{good.SellPrice}}</span>
                       <span class="local">产地：南非</span>
                   </div>       
               </div>
@@ -43,11 +43,11 @@
                   </div>
                   <div class="numb1">
                       <span class="gay">数量</span>
-                      <span class="nu">
+                      <!-- <span class="nu">
                             <span class="add">+</span>
                             <span class="null">1</span>
                         <span class="jian">-</span>
-                      </span>
+                      </span> -->
                     
                   </div>
 
@@ -69,18 +69,60 @@
           </div>
       </div>
       
-      <Bottom></Bottom>
+      <div class="bottom-box">
+      <div class="bottom">
+          <div class="left">
+              <dl>
+                  <dt><span class="iconfont">&#xe6da;</span></dt>
+                  <dd>首页</dd>
+              </dl>
+               <dl>
+                  <dt><span class="iconfont">&#xe610;</span></dt>
+                  <dd>购物车</dd>
+              </dl>
+          </div>
+          <div class="shop">
+              <a    @click="gouwuche">加入购物车</a>
+          </div>
+      </div>
+  </div>
   </div>
 </template>
 
 <script>
+import {mapActions} from "vuex"
 import Bottom from './Bottom'
 
 export default {
      components:{
         Bottom
     },
+
+    data(){
+        return {
+            good:[]
+        }
+    },
+    created(){
+      
+        scrollTo(0,0)
+        this.$http.get("api/splist",{
+            params:{
+                id:this.$route.params.id
+            }
+        }).then(res=>{
+            this.good=res.data.data.object_list[0]
+                 
+        })
+    },
     methods:{
+
+           ...mapActions(['addGoodInCars']),
+           gouwuche(){
+               this.addGoodInCars(this.good);
+               
+               this.$router.push("/car")
+           },
         test:function(){
             var app = document.getElementById("tit")
             app.style.display = "none"
@@ -140,6 +182,7 @@ export default {
             .banner{
                 img{
                     width:100%;
+                    height:3rem;
                 }
                 
                 
@@ -278,6 +321,47 @@ export default {
                             margin-left:0.1rem;
 
                         }
+                }
+            }
+        }
+    }
+    .bottom-box{
+        width:100%;
+        position: fixed;
+        bottom:0;
+        left:0;
+        .bottom{
+            height:0.5rem;
+            width:100%;
+            background:#fff;
+            border-top:1px solid #ccc;
+            overflow: hidden;
+            .left{
+               
+                width:1.5rem;
+                height:0.5rem;
+                float:left; 
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                padding:0 0.3rem;
+                dl{ 
+                    color:#8d8a8a;
+                   
+                }
+
+            }
+            .shop{
+                float:right;
+                a{
+                    text-align: center;
+                    line-height:0.5rem;
+                    display:block;
+                    width:2.25rem;
+                    height:0.5rem;
+                    background:red;
+                    color:#fff;
+                    font-size:16px;
                 }
             }
         }
