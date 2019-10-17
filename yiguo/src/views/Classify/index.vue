@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="Classify">
         <div class="header">
             <form action="">
@@ -37,9 +38,10 @@
 
 <script>
 import TabBar from "@/components/TabBar"
+import List from './List'
 export default {
     components:{
-        TabBar
+        TabBar,List
     },
     data(){
         return {
@@ -153,4 +155,3 @@ export default {
     .active{
         background:white;
     }
-</style>

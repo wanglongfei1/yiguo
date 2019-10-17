@@ -10,6 +10,17 @@ Vue.prototype.$http = axios
 Vue.config.productionTip = false
 // 引入 根rem
 import "./modules/rem"
+
+import axios from "axios"
+Vue.prototype.$http = axios
+
+//引入swiper样式
+import "swiper/css/swiper.min.css"
+
+import { Lazyload,InfiniteScroll  } from 'mint-ui';
+Vue.use(Lazyload);
+Vue.use(InfiniteScroll);
+
 //引入directive  自定义命令
 import "./modules/directive"
 //引入swiper样式
