@@ -31,11 +31,16 @@
                  
             </div>
         </div>
+         <TabBar></TabBar>
     </div>
 </template>
 
 <script>
+import TabBar from "@/components/TabBar"
 export default {
+    components:{
+        TabBar
+    },
     data(){
         return {
             num:0,
