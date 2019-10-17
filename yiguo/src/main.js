@@ -12,6 +12,14 @@ import "./modules/rem"
 import "./modules/directive"
 //引入swiper样式
 import "swiper/css/swiper.min.css"
+//
+import axios from "axios"
+Vue.prototype.$http = axios
+//mint-ui
+import { Lazyload, InfiniteScroll } from 'mint-ui';
+Vue.use(Lazyload);
+Vue.use(InfiniteScroll);
+
 new Vue({
   router,
   store,

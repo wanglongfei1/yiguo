@@ -34,11 +34,11 @@ module.exports = {
         hotOnly: false,
         proxy: {
             "/api":{
-                target:"http://47.96.0.211:9000",
+                target:"http://120.78.3.11:4396",
                 changeOrigin:true,
-                pathRewrite:{
-                    "^/api":""
-                }
+                // pathRewrite:{
+                //     "^/api":""
+                // }
             }
         }, // 设置代理
         before: app => { }

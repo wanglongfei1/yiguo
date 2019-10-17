@@ -1,34 +1,47 @@
+.loading{
+    background:url("../assets/loading.gif") no-repeat center;
+    height:2.4rem;
+    width:100%;
+}
+.loading2{
+    background:url("../assets/loading.gif") no-repeat center;
+    background-size: 0.5rem;
+    height:0.6rem;
+    width:0.6rem;
+}
+//首页
 .home{
-    margin-top:50px;
+    margin-top:45px;
+    margin-bottom: 50px;
     .first-screen{
-        padding-bottom: .3rem;
+        padding-bottom: .09rem;
         .first-screen-menu{
             background: #fff;
             background-size: 100% 100%;
-            padding: .27rem .53rem;
+            padding: .08rem .3rem;
             .one{
                 float: left;
                 width: 25%;
-                padding: 0 0 .48rem;
+                padding: 0 0 .143rem;
                 text-align: center;
-                font-size: .36rem;
+                font-size: .11rem;
                 color: #333;
                 i{
                     display: block;
-                    width: 3rem;
-                    padding: 0 0 .05rem;
+                    width: 0.9rem;
+                    padding: 0 0 .015rem;
                     text-align: center;
                     background-repeat: no-repeat;
                     background-position: 50%;
-                    background-size: 1.6rem 1.6rem;
+                    background-size: 0.477rem 0.477rem;
                     img{
                         display: inline-block;
-                        width: 2.05rem;
-                        height: 2.05rem;
+                        width: 0.612rem;
+                        height: 0.612rem;
                     }
                 }
                 .one-title{
-                    font-size: .43rem;
+                    font-size: .128rem;
                 }
             }        
         }
@@ -38,27 +51,27 @@
             img{
                 display: block;
                 width: 100%;
-                height: 3.8rem;
+                height: 1.134rem;
             }
         }
         .first-screen-news{
             position: relative;
             box-sizing: border-box;
-            height: 1.1rem;
-            padding: .22rem .32rem .22rem 3.35rem;
+            height: 0.328rem;
+            padding: .066rem .095rem .066rem 1rem;
             background: #fff;
             .title{
                 position: absolute;
-                top: .35rem;
-                left: .5rem;
-                width: 2.26rem;
-                height: .44rem;
+                top: .1rem;
+                left: .15rem;
+                width: 0.675rem;
+                height: .131rem;
                 background: url(//img06.yiguoimg.com/e/web/161222/018522/134216/news.png) no-repeat;
                 background-size: 100% 100%;
             }
             .swiper-container{
                 width: 100%;
-                height: .66rem;
+                height: .197rem;
                 margin-top: 3px;
                 .swiper-wrapper{
                     font-size: 11px;
@@ -76,7 +89,7 @@
             background: #d6d6d7 url(//img02.yiguo.com/e/web/150930/00982/163525/placeholder_140x140.png) no-repeat 50%;
             img{
                 width: 100%;
-                height: 7.2rem;
+                height: 2.15rem;
             }
         }
         .product-list{
@@ -87,23 +100,23 @@
                 overflow-y: hidden;
                 box-sizing: border-box;
                 width: 100%;
-                padding-bottom: .2rem;
+                padding-bottom: .06rem;
                 white-space: nowrap;
-                padding-left: .53rem;
+                padding-left: .158rem;
                 .proitem{
                     display: inline-block;
                     background: #fff;
-                    margin-right: .33rem;
-                    border-radius: .2rem;
+                    margin-right: .098rem;
+                    border-radius: .06rem;
                     box-shadow: 0 0 5px rgba(0,0,0,.1);
                     .pic{
                         position: relative;
                         .pic-a{
                             display: inline-block;
                             img{
-                                width: 4.11rem;
-                                height: 4.11rem;
-                                border-radius: .2rem .2rem 0 0;
+                                width: 1.23rem;
+                                height: 1.23rem;
+                                border-radius: .06rem .06rem 0 0;
                             }
                         }
                         .saletip{
@@ -111,34 +124,39 @@
                             bottom: 0;
                             span{
                                 border: none;
-                                height: .34rem;
+                                height: .101rem;
                                 background: #fb3d3d;
                                 color: #fff;
                                 font-weight: 700;
-                                border-radius: 2rem 3.31rem 3.31rem 0;
-                                padding: .16rem .3rem;
-                                font-size: .33rem;
-                                line-height: .34rem;
+                                border-radius: 0.597rem 0.988rem 0.988rem 0;
+                                padding: .048rem .09rem;
+                                font-size: .098rem;
+                                line-height: .101rem;
                             }
                         }
                         
                     }
                     .info{
                         box-sizing: border-box;
-                        width: 4.11rem;
+                        width: 1.23rem;
                         text-align: left;
                         padding-left: 0;
-                        padding: .27rem;
+                        padding: .081rem;
+                        .name{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
                         a{
                             color: #333;
                         }
                         .price{
-                            margin-top: .13rem;
-                            height: .66rem;
-                            line-height: .66rem;
+                            margin-top: .039rem;
+                            height: .197rem;
+                            line-height: .197rem;
                             font-size: 11px;
                             strong{
-                                margin-right: .1rem;
+                                margin-right: .03rem;
                                 font-weight: bold;
                                 color: #fb3d3d;
                             }
@@ -171,6 +189,7 @@
             a{
                 display: block;
                 width: 100%;
+                height: 2.3rem;
                 background: #d6d6d7 url(//img02.yiguo.com/e/web/150930/00982/163525/placeholder_140x140.png) no-repeat 50%;
                 img{
                     width: 100%;
@@ -181,7 +200,7 @@
     .prolist{
         padding:0;
         .prolist-blockwrap{
-            margin: 0 .53rem;
+            margin: 0 .158rem;
             background: none;
             box-sizing: border-box;
             .proitem .name, .proitem .sub, .proitem .price {
@@ -191,91 +210,229 @@
             }
             .proitem{
                 position: relative;
-                padding: .4rem .33rem;
+                padding: .119rem .099rem;
                 -webkit-box-shadow: 0 0 5px rgba(0,0,0,.1);
                 box-shadow: 0 0 5px rgba(0,0,0,.1);
-                border-radius: .2rem;
+                border-radius: .06rem;
                 background: #fff;
-                margin-bottom: .32rem;
+                margin-bottom: .096rem;
                 .pic{
                     float: left;
-                    width: 3.11rem;
-                    height: 3.11rem;
-                    margin-right: .48rem;
+                    width: 0.928rem;
+                    height: 0.928rem;
+                    margin-right: .143rem;
                     a{
                         display: inline-block;
                         img{
-                            height: 3.11rem;
+                            height: 0.928rem;
                             width: 100%;
                         }
                     }
                 }
                 .info{
                     position: relative;
-                    height: 3.11rem;
+                    height: 0.928rem;
                     .name{
-                        line-height: .5rem;
+                        line-height: .149rem;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: normal;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
                         a{
-                            font-size: .43rem;
+                            font-size: .128rem;
                             color: #000;
                         }
                     }
                     .sub{
-                        margin-top: .27rem;
+                        margin-top: .07rem;
                         color: #8d8a8a;
                         .saletip{
-                            font-size: .4rem;
+                            font-size: .119rem;
                             color: #666;
                             span{
-                                height: .53rem;
-                                line-height: .53rem;
-                                padding: 0 .3rem;
-                                font-size: .33rem;
+                                height: .158rem;
+                                line-height: .158rem;
+                                padding: 0 .1rem;
+                                font-size: .119rem;
                                 color: #01b27a;
                                 border: 1px solid #01b27a;
-                                border-radius: 1em;
+                                border-radius: 0.299em;
                             }
                         }
                         
                     }
                 }
                 .pricePadding{
-                    padding-right: .2rem;
-                    width: 6.99rem;
-                    height: .79rem;
-                    line-height: .79rem;
+                    padding-right: .06rem;
+                    width: 2.087rem;
+                    height: .235rem;
+                    line-height: .236rem;
                     position: absolute;
                     bottom: 0;
-                    left: 3.6rem;
+                    left: 1.075rem;
                     font-size: 11px;
                     color: #8d8a8a;
                     strong{
-                        font-size: .6rem;
+                        font-size: .179rem;
                         color: #fb3d3d;
                     }
                     .price-addcart{
-                        width: 1.6rem;
-                        height: .79rem;
+                        width: .5rem;
+                        height: .236rem;
                         background-size: 100% 100%;
                         position: absolute;
                         bottom: 0;
-                        right: .2rem;
-                        border-radius: 0.4rem ;
+                        right: .06rem;
+                        border-radius: 0.12rem ;
                         background-color: #01b27a;
                         color:#fff;
                         font-size: 11px;
-                        line-height: .79rem;
+                        line-height: .236rem;
                         text-align: center;
                     }
                 }
             }
             
+        }
+    }
+}
+// 登录
+.login{
+    .input-item{
+        border: 1px solid #d9dfd5;
+        border-width: 1px 0;
+        margin-top: 30px;
+        padding: 0 0 0 20px;
+        .input-item-list{
+            position: relative;
+            padding: 15px 0;
+            border-bottom: 1px solid #e7e7e7;
+            .fa{
+                font-size:20px;
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 18px;
+                height: 20px;           
+            }
+            input{
+                padding: 0 0 0 30px;
+                display: block;
+                height: 30px;
+                font-size: 16px;
+                border: none;
+                background: none;
+            }
+            .yzcode{
+                height: 30px;
+                margin-left: 5px;
+            }
+        }   
+    }
+    .login-option{
+        margin: 15px 30px 0 20px;
+        .retrieve_password{
+            float: left;
+            width: 45%;
+            text-align: left;
+            a{
+                color: #008842;
+                font-size: 15px;
+            }
+        }
+    }
+    .btn-login{
+        margin: 30px 30px 0;
+        text-align: center;
+        button{
+            display: inline-block;
+            width: 45%;
+            height: 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .btn_green{
+            color: #fff;
+            background: #008842;
+            float: left;
+        }
+        .btn_white{
+            border: 1px solid #008842;
+            color: #008842;
+            background: #fff;
+            float: right;
+        }
+    }
+    .bottomcopyright{
+        position: absolute;
+        bottom: 10px;
+        left:0;
+        right:0;
+        margin:0 auto;
+        .yiguo_logo{
+            width: 104px;
+            height: 34px;
+            background-image: url(//img02.yiguo.com/e/web/150924/00982/140710/yiguo_logo.png);
+            background-size: 100% 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+//注册
+.logup{
+    .input-item{
+        border: 1px solid #d9dfd5;
+        border-width: 1px 0;
+        margin-top: 30px;
+        padding: 0 0 0 20px;
+        .input-item-list{
+            position: relative;
+            padding: 15px 0;
+            border-bottom: 1px solid #e7e7e7;
+            input{
+                display: block;
+                width: 100%;
+                height: 30px;
+                font-size: 16px;
+                border: none;
+                background: none;
+            }
+            .btn-captcha{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                padding: 0 .2rem;
+                box-sizing: border-box;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                border-radius: 4px;
+                background: #008842;
+            }
+        }
+    }
+    .label-box{
+        margin-top:10px;
+        text-align: center;
+        color:#8d8a8a;
+        a{
+            color:green;
+            font-size:13px;
+        }
+    }
+    .btn-login{
+        text-align: center;
+        margin:25px;
+        button{
+            width:160px;
+            height:40px;
+            background:green;
+            border:none;
+            border-radius:4px ;
+            color: #fff;
+            font-size:15px
         }
     }
 }
