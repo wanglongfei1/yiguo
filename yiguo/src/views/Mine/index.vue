@@ -3,7 +3,7 @@
         <div class="header">
             <p><img src="../../assets/no-pic.jpg" alt=""></p>
             <p>
-                <a href="">登录</a><span>/</span><a href="">注册</a> 
+                <a @click="login">登录</a><span>/</span><a @click="logup">注册</a> 
             </p>
             <i class = "fa fa-cog fa-fw"></i>
         </div>
@@ -80,7 +80,19 @@
 
 <script>
 export default {
+    methods:{
+        login(){
+            this.$router.push({
+                path:"/login"
 
+            })
+        },
+        logup(){
+            this.$router.push({
+                path:"/logup"
+            })
+        }
+    }
 }
 </script>
 styl

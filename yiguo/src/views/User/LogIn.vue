@@ -4,12 +4,12 @@
             <div class="input-item">
                 <div class="input-item-list username">
                     <span class="fa fa-user"></span> 
-                    <input type="text" placeholder="请输入您的用户名"> 
+                    <input type="text" placeholder="请输入您的用户名" v-model="username"> 
                     <i class="close" style="display: none;"></i>
                 </div> 
                 <div class="input-item-list password">
                     <span class="fa fa-key"></span> 
-                    <input type="password" placeholder="请输入您的密码"> 
+                    <input type="password" placeholder="请输入您的密码" v-model="password"> 
                     <i class="close" style="display: none;"></i>
                 </div> 
                 <div class="input-item-list password">
@@ -23,20 +23,55 @@
                 </span>
             </div> 
             <div class="btn-login clearfix">
-                <button type="button" class="btn_green myleft">登录</button> 
-                <button type="button" class="btn_white myright">立即注册</button>
+                <button type="button" class="btn_green myleft" @click="inlogin">登录</button> 
+                <button type="button" class="btn_white myright" @click="logup">立即注册</button>
             </div>
         </form>
         <div class="bottomcopyright">
             <em class=" icon yiguo_logo"></em>
         </div>
-        <router-link to="/home">返回首页被</router-link>
     </div>
 </template>
 
 <script>
+import axios from "axios"
+import { MessageBox } from 'mint-ui';
 export default {
-
+    data(){
+        return{
+            username:null,
+            password:null
+        }
+    },
+    methods:{
+        logup(){
+            this.$router.push({
+                path:"/logup"
+            })
+        },
+        inlogin(){
+            let param = new URLSearchParams()
+            param.append('username',this.username)
+            param.append('password',this.password)
+            axios({
+                method: 'post',
+                url: '/api/login',
+                data: param
+            }).then(res=>{
+                MessageBox.alert("",{
+                    title: '提示',
+                    message: res.data.result,
+                }).then(action =>{
+                    // console.log(res.data.result);
+                    if(res.data.result === "登录成功"){
+                        this.$router.push({
+                            path:"./home"
+                        })
+                    }
+                })
+            })
+        }
+    }
 }
 </script>
 

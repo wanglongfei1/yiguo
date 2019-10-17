@@ -12,7 +12,7 @@
        <span class="iconfont">&#xe807;</span>
       <p>饭吧</p>
     </router-link>
-    <router-link to="/a" class="bottomNav_link">
+    <router-link to="/all" class="bottomNav_link">
       <span class="iconfont">&#xe610;</span>
       <p>购物车</p>
     </router-link>

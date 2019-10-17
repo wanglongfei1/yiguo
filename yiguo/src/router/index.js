@@ -4,21 +4,24 @@ import Eat from './eat'
 import Classify from './classify'
 import textdetail from './textdetail'
 import good from './good'
-
 import home from "./home"
-import login from "./user"
+
+import all from "./all"
+import car from "./car"
+import login from "./login"
+import logup from "./logup"
+
 Vue.use(Router)
-import All from "./all"
-import Car from "./car"
+
 
 
 import Mine from "./mine"
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+ 
+
   routes: [
-    
-    home,Mine,Classify,good,Eat
+    {path:'/', redirect:'home'},
+     home,Mine,Classify,good,Eat,all,textdetail,car,login,logup
 
   ]
 })
