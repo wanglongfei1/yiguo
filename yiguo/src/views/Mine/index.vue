@@ -83,8 +83,8 @@ export default {
 
 }
 </script>
-
-<style lang = "scss">
+styl
+<style lang = "scss" scoped>
     body{
         background:rgb(244,244,244);
     }

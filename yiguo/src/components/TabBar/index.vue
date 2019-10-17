@@ -8,7 +8,7 @@
       <span class="iconfont">&#xe616;</span>
       <p>分类</p>
     </router-link>
-    <router-link to="/a" class="bottomNav_link">
+    <router-link to="/eat" class="bottomNav_link">
        <span class="iconfont">&#xe807;</span>
       <p>饭吧</p>
     </router-link>
