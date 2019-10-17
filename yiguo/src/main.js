@@ -10,8 +10,8 @@ Vue.config.productionTip = false
 import "./modules/rem"
 //引入directive  自定义命令
 import "./modules/directive"
-
-
+import axios from "axios"
+Vue.prototype.$http = axios   
 new Vue({
   router,
   store,
